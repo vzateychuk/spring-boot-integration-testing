@@ -1,8 +1,8 @@
-package vez.demo.repo;
+package vez.student.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import vez.demo.model.Student;
+import vez.student.model.Student;
 
 public interface StudentRepo extends JpaRepository<Student, Long> {
 

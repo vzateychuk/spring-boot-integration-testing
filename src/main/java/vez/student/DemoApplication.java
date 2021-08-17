@@ -1,4 +1,4 @@
-package vez.demo;
+package vez.student;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

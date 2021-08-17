@@ -1,4 +1,4 @@
-package vez.demo.exception;
+package vez.student.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -1,4 +1,4 @@
-package vez.demo.cache;
+package vez.student.cache;
 
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import vez.demo.model.Student;
-import vez.demo.repo.StudentRepo;
-import vez.demo.srv.StudentService;
+import vez.student.model.Student;
+import vez.student.repo.StudentRepo;
+import vez.student.srv.StudentService;
 
 @SpringBootTest(webEnvironment = WebEnvironment.NONE)
 public class StudentCacheTest {

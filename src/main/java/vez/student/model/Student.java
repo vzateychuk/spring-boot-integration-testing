@@ -1,4 +1,4 @@
-package vez.demo.model;
+package vez.student.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
