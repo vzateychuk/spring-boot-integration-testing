@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
+import vez.demo.exception.StudentNotFoundException;
 import vez.demo.model.Student;
 import vez.demo.srv.StudentService;
 
@@ -37,4 +38,16 @@ public class StudentControllerTest {
             .andExpect(jsonPath("name").value("Mike"))
             .andExpect(jsonPath("grade").value("10"));
     }
+
+    @Test
+    void getStudent_forMissingStudent_returns404() throws Exception {
+
+        //given
+        given(studentService.getStudentById(anyLong())).willThrow(StudentNotFoundException.class);
+
+        //when //then
+        mockMvc.perform(get("/students/1"))
+            .andExpect(status().isNotFound());
+    }
+
 }
