@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class StudentDto {
 
     private Long id;
-    private String name;
+    private String nameStudent;
 }

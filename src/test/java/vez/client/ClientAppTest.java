@@ -24,13 +24,14 @@ public class ClientAppTest {
         //given
         final Long id = 123L;
         // Stubbing WireMock
-        stubFor( get(StudentClient.STUDENT_ENDPOINT + id).willReturn( okJson("{\"id\":123, \"name\": \"Mike\" }") ) );
+        stubFor( get(StudentClient.STUDENT_ENDPOINT + id)
+            .willReturn( okJson("{\"id\":123, \"nameStudent\": \"Mike\" }") ) );
 
         //when
         StudentDto dto = studentClient.getStudentById(id);
 
         //then
         then(dto.getId()).isEqualTo(id);
-        then(dto.getName()).isNotBlank();
+        then(dto.getNameStudent()).isEqualTo("Mike");
     }
 }
