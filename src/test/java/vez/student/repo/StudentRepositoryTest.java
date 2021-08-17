@@ -1,4 +1,4 @@
-package vez.demo.repo;
+package vez.student.repo;
 
 import static org.assertj.core.api.BDDAssertions.then;
 
@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import vez.demo.model.Student;
+import vez.student.model.Student;
 
 @DataJpaTest
 public class StudentRepositoryTest {

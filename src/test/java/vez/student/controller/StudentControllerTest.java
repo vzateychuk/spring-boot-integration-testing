@@ -1,4 +1,4 @@
-package vez.demo.controller;
+package vez.student.controller;
 
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.BDDMockito.given;
@@ -11,9 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
-import vez.demo.exception.StudentNotFoundException;
-import vez.demo.model.Student;
-import vez.demo.srv.StudentService;
+import vez.student.exception.StudentNotFoundException;
+import vez.student.model.Student;
+import vez.student.srv.StudentService;
 
 @WebMvcTest
 public class StudentControllerTest {
