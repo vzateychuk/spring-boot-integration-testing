@@ -16,9 +16,11 @@ import vez.student.srv.StudentService;
 @AllArgsConstructor
 public class StudentController {
 
+    public static final String STUDENT_API = "/students";
+
     @Autowired private final StudentService studentService;
 
-    @GetMapping("/students/{id}")
+    @GetMapping(STUDENT_API + "/{id}")
     public Student getStudent(@PathVariable Long id) {
         return studentService.getStudentById(id);
     }

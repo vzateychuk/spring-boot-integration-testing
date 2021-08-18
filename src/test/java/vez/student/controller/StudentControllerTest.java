@@ -20,8 +20,7 @@ public class StudentControllerTest {
 
     @Autowired private MockMvc mockMvc;
 
-    @MockBean
-    private StudentService studentService;
+    @MockBean private StudentService studentService;
 
     @Test
     void getStudent_forSavedStudent_isReturned() throws Exception {
@@ -32,7 +31,7 @@ public class StudentControllerTest {
         );
 
         // when // then
-        mockMvc.perform(get("/students/1"))
+        mockMvc.perform(get(StudentController.STUDENT_API + "/1"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("id").value(123L))
             .andExpect(jsonPath("name").value("Mike"))

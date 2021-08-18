@@ -92,6 +92,10 @@
         <extensions>true</extensions>
         <configuration>
           <testFramework>JUNIT5</testFramework>
+          <!-- Since we're using MockMVC to verify our integration tests, we need to tell our Spring Cloud Contract plugin to use MockMVC as test mode. -->
+          <testMode>MOCKMVC</testMode>
+          <!-- Here we need to point out where is the Base Class.-->
+          <baseClassForTests>vez.student.controller.StudentControllerBaseClass</baseClassForTests>
         </configuration>
       </plugin>
       <plugin>
